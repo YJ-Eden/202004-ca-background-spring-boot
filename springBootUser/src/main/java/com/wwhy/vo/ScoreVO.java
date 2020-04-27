@@ -54,17 +54,53 @@ public class ScoreVO implements Serializable{
 	@ApiModelProperty(value = "备注",name="remark")
 	private String remark;
 
+	@ApiModelProperty(value = "更新时间11",name="updateTime11")
+	private Date updateTime11;
+
+	@ApiModelProperty(value = "是否完成11",name="iscomplete11")
+	private Integer iscomplete11;
+
+	@ApiModelProperty(value = "分数111",name="score111")
+	private Double score111;
+
+	@ApiModelProperty(value = "答案111",name="answer111")
+	private String answer111;
+
+	@ApiModelProperty(value = "更新时间12",name="updateTime12")
+	private Date updateTime12;
+
+	@ApiModelProperty(value = "是否完成12",name="iscomplete12")
+	private Integer iscomplete12;
+
 	@ApiModelProperty(value = "分数121",name="score121")
 	private Double score121;
 
-	@ApiModelProperty(value = "答案12110",name="answer12110")
-	private Double answer12110;
+	@ApiModelProperty(value = "答案121",name="answer121")
+	private String answer121;
 
-	@ApiModelProperty(value = "答案12111",name="answer12111")
-	private Double answer12111;
+	@ApiModelProperty(value = "分数122",name="score122")
+	private Double score122;
 
-	@ApiModelProperty(value = "答案12112",name="answer12112")
-	private Double answer12112;
+	@ApiModelProperty(value = "答案122",name="answer122")
+	private String answer122;
+
+	@ApiModelProperty(value = "更新时间13",name="updateTime13")
+	private Date updateTime13;
+
+	@ApiModelProperty(value = "是否完成13",name="iscomplete13")
+	private Integer iscomplete13;
+
+	@ApiModelProperty(value = "分数131",name="score131")
+	private Double score131;
+
+	@ApiModelProperty(value = "答案131",name="answer131")
+	private String answer131;
+
+	@ApiModelProperty(value = "分数132",name="score132")
+	private Double score132;
+
+	@ApiModelProperty(value = "答案132",name="answer132")
+	private String answer132;
 
 
 	public Long getId(){
@@ -171,35 +207,67 @@ public class ScoreVO implements Serializable{
 		this.unit = unit;
 	}
 
-	public Double getScore121(){
-		return score121;
+	public Date getUpdateTime11(){
+		return updateTime11;
+	}
+	public void setUpdateTime11(Date updateTime){
+		updateTime11 = updateTime;
 	}
 
-	public void setScore121(Double score121){
-		this.score121 = score121;
+	public Integer getIscomplete11(){return iscomplete11;}
+	public void setIscomplete11(Integer iscomplete){iscomplete11 = iscomplete;}
+
+	public Double getScore111(){
+		return score111;
+	}
+	public void setScore111(Double score){
+		this.score111 = score;
 	}
 
-	public Double getAnswer12110(){
-		return answer12110;
+	public String getAnswer111(){return answer111;}
+	public void setAnswer111(String answer){answer111=answer;}
+
+	public Date getUpdateTime12(){
+		return updateTime12;
+	}
+	public void setUpdateTime12(Date updateTime){
+		updateTime12 = updateTime;
 	}
 
-	public void setAnswer12110(Double answer12110){
-		this.answer12110 = answer12110;
+	public Integer getIscomplete12(){return iscomplete12;}
+	public void setIscomplete12(Integer iscomplete){iscomplete12 = iscomplete;}
+
+	public Double getScore121(){return score121;}
+	public void setScore121(Double score){this.score121 = score;}
+
+	public String getAnswer121(){return answer121;}
+	public void setAnswer121(String answer){answer121=answer;}
+
+	public Double getScore122(){return score122;}
+	public void setScore122(Double score){this.score122 = score;}
+
+	public String getAnswer122(){return answer122;}
+	public void setAnswer122(String answer){answer122=answer;}
+
+	public Date getUpdateTime13(){
+		return updateTime13;
+	}
+	public void setUpdateTime13(Date updateTime){
+		updateTime13 = updateTime;
 	}
 
-	public Double getAnswer12111(){
-		return answer12111;
-	}
+	public Integer getIscomplete13(){return iscomplete13;}
+	public void setIscomplete13(Integer iscomplete){iscomplete13 = iscomplete;}
 
-	public void setAnswer12111(Double answer12111){
-		this.answer12111 = answer12111;
-	}
+	public Double getScore131(){return score131;}
+	public void setScore131(Double score){this.score131 = score;}
 
-	public Double getAnswer12112(){
-		return answer12112;
-	}
+	public String getAnswer131(){return answer131;}
+	public void setAnswer131(String answer){answer131=answer;}
 
-	public void setAnswer12112(Double answer12112){
-		this.answer12112 = answer12112;
-	}
+	public Double getScore132(){return score132;}
+	public void setScore132(Double score){this.score132 = score;}
+
+	public String getAnswer132(){return answer132;}
+	public void setAnswer132(String answer){answer132=answer;}
 }

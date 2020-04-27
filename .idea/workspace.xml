@@ -6,7 +6,15 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82c051df-8e5d-47c8-a60a-6136480c2d70" name="Default Changelist" comment="" />
+    <list default="true" id="82c051df-8e5d-47c8-a60a-6136480c2d70" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/user_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/user_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/controller/ScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/controller/ScoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/dao/mapper/ScoreMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/dao/mapper/ScoreMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/entity/ScoreEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/entity/ScoreEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/vo/ScoreVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/vo/ScoreVO.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +35,9 @@
     <expand />
     <select />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1TWKDX4Kr0Rgd8sKKfRRHyWhSk8" />
   <component name="PropertiesComponent">
     <property name="RequestMappingsPanelOrder0" value="0" />
@@ -35,6 +46,7 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -167,10 +179,25 @@
       <workItem from="1587731897729" duration="5162000" />
       <workItem from="1587742506845" duration="211000" />
       <workItem from="1587777586747" duration="352000" />
+      <workItem from="1587970848716" duration="1295000" />
+      <workItem from="1587972228686" duration="2941000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

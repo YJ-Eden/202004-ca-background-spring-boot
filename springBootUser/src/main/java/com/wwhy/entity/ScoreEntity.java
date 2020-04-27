@@ -44,6 +44,9 @@ public class ScoreEntity extends BasicEntity {
 	@ApiModelProperty(value = "备注",name="remark")
 	private String remark;
 
+	@ApiModelProperty(value = "更新时间11",name="updateTime11")
+	private Date updateTime11;
+
 	@ApiModelProperty(value = "是否完成11",name="iscomplete11")
 	private Integer iscomplete11;
 
@@ -52,6 +55,9 @@ public class ScoreEntity extends BasicEntity {
 
 	@ApiModelProperty(value = "答案111",name="answer111")
 	private String answer111;
+
+	@ApiModelProperty(value = "更新时间12",name="updateTime12")
+	private Date updateTime12;
 
 	@ApiModelProperty(value = "是否完成12",name="iscomplete12")
 	private Integer iscomplete12;
@@ -67,6 +73,9 @@ public class ScoreEntity extends BasicEntity {
 
 	@ApiModelProperty(value = "答案122",name="answer122")
 	private String answer122;
+
+	@ApiModelProperty(value = "更新时间13",name="updateTime13")
+	private Date updateTime13;
 
 	@ApiModelProperty(value = "是否完成13",name="iscomplete13")
 	private Integer iscomplete13;
@@ -148,6 +157,13 @@ public class ScoreEntity extends BasicEntity {
 		this.unit = unit;
 	}
 
+	public Date getUpdateTime11(){
+		return updateTime11;
+	}
+	public void setUpdateTime11(Date updateTime){
+		updateTime11 = updateTime;
+	}
+
 	public Integer getIscomplete11(){return iscomplete11;}
 	public void setIscomplete11(Integer iscomplete){iscomplete11 = iscomplete;}
 
@@ -160,6 +176,13 @@ public class ScoreEntity extends BasicEntity {
 
 	public String getAnswer111(){return answer111;}
 	public void setAnswer111(String answer){answer111=answer;}
+
+	public Date getUpdateTime12(){
+		return updateTime12;
+	}
+	public void setUpdateTime12(Date updateTime){
+		updateTime12 = updateTime;
+	}
 
 	public Integer getIscomplete12(){return iscomplete12;}
 	public void setIscomplete12(Integer iscomplete){iscomplete12 = iscomplete;}
@@ -175,6 +198,13 @@ public class ScoreEntity extends BasicEntity {
 
 	public String getAnswer122(){return answer122;}
 	public void setAnswer122(String answer){answer122=answer;}
+
+	public Date getUpdateTime13(){
+		return updateTime13;
+	}
+	public void setUpdateTime13(Date updateTime){
+		updateTime13 = updateTime;
+	}
 
 	public Integer getIscomplete13(){return iscomplete13;}
 	public void setIscomplete13(Integer iscomplete){iscomplete13 = iscomplete;}

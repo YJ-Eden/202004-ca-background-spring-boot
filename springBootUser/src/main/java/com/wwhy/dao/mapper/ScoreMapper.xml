@@ -10,9 +10,19 @@
 		<result column="teacher_id" property="teacherId" jdbcType="BIGINT" />
 		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
 		<result column="remark" property="remark" jdbcType="VARCHAR" />
+		<result column="update_time11" property="updateTime11" jdbcType="TIMESTAMP" />
+		<result column="iscomplete11" property="iscomplete11" jdbcType="INTEGER"/>
+		<result column="update_time12" property="updateTime12" jdbcType="TIMESTAMP" />
+		<result column="iscomplete12" property="iscomplete12" jdbcType="INTEGER"/>
+		<result column="score121" property="score121" jdbcType="DECIMAL"/>
+		<result column="score122" property="score122" jdbcType="DECIMAL"/>
+		<result column="update_time13" property="updateTime13" jdbcType="TIMESTAMP" />
+		<result column="iscomplete13" property="iscomplete13" jdbcType="INTEGER"/>
+		<result column="score131" property="score131" jdbcType="DECIMAL"/>
+		<result column="score132" property="score132" jdbcType="DECIMAL"/>
 	</resultMap>
 	<sql id="Base_Column_List" >
-		id,student_id,project,unit,score,ranking,teacher_id,update_time,remark,score121,answer12110,answer12111,answer12112
+		id,student_id,project,unit,score,ranking,teacher_id,update_time,remark,update_time11,iscomplete11,update_time12,iscomplete12,score121,score122,update_time13,iscomplete13,score131,score132
 	</sql>
 	<!-- 根据ID查询数据 -->
 	<select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
@@ -213,11 +223,13 @@
 		</selectKey>
 		insert into score (
 		student_id,
+		update_time11,
 		iscomplete11,
 		answer111,
 		update_time
 		) values(
 		#{studentId,jdbcType=BIGINT},
+		#{updateTime11,jdbcType=TIMESTAMP},
 		#{iscomplete11,jdbcType=INTEGER},
 		#{answer111,jdbcType=VARCHAR},
 		#{updateTime,jdbcType=TIMESTAMP}
@@ -227,6 +239,7 @@
 	<!-- 根据ID修改数据1_1_1 -->
 	<update id="updateSelective1_1_1" parameterType="ScoreEntity" >
 		update score set
+		update_time11=#{updateTime11,jdbcType=TIMESTAMP},
 		iscomplete11=#{iscomplete11,jdbcType=INTEGER},
 		answer111=#{answer111,jdbcType=VARCHAR},
 		update_time = #{updateTime,jdbcType=TIMESTAMP}
@@ -240,11 +253,13 @@
 		</selectKey>
 		insert into score (
 		student_id,
+		update_time12,
 		score121,
 		answer121,
 		update_time
 		) values(
 		#{studentId,jdbcType=BIGINT},
+		#{updateTime12,jdbcType=TIMESTAMP},
 		#{score121,jdbcType=DECIMAL},
 		#{answer121,jdbcType=VARCHAR},
 		#{updateTime,jdbcType=TIMESTAMP}
@@ -267,6 +282,7 @@
 	<update id="updateSelective1_2_1" parameterType="ScoreEntity" >
 		update score set
 			score121 = #{score121,jdbcType=DECIMAL},
+			update_time12 = #{updateTime12,jdbcType=TIMESTAMP},
 			answer121 = #{answer121,jdbcType=VARCHAR},
 			update_time = #{updateTime,jdbcType=TIMESTAMP}
 		where student_id = #{studentId,jdbcType=BIGINT}
@@ -280,12 +296,14 @@
 		insert into score (
 		student_id,
 		score122,
+		update_time12,
 		iscomplete12,
 		answer122,
 		update_time
 		) values(
 		#{studentId,jdbcType=BIGINT},
 		#{score122,jdbcType=DECIMAL},
+		#{updateTime12,jdbcType=TIMESTAMP},
 		#{iscomplete12,jdbcType=INTEGER},
 		#{answer122,jdbcType=VARCHAR},
 		#{updateTime,jdbcType=TIMESTAMP}
@@ -296,6 +314,7 @@
 	<update id="updateSelective1_2_2" parameterType="ScoreEntity" >
 		update score set
 		score122 = #{score122,jdbcType=DECIMAL},
+		update_time12 = #{updateTime12,jdbcType=TIMESTAMP},
 		iscomplete12 = #{iscomplete12,jdbcType=INTEGER},
 		answer122 = #{answer122,jdbcType=VARCHAR},
 		update_time = #{updateTime,jdbcType=TIMESTAMP}
@@ -310,11 +329,13 @@
 		insert into score (
 		student_id,
 		score131,
+		update_time13,
 		answer131,
 		update_time
 		) values(
 		#{studentId,jdbcType=BIGINT},
 		#{score131,jdbcType=DECIMAL},
+		#{updateTime13,jdbcType=TIMESTAMP},
 		#{answer131,jdbcType=VARCHAR},
 		#{updateTime,jdbcType=TIMESTAMP}
 		)
@@ -324,6 +345,7 @@
 	<update id="updateSelective1_3_1" parameterType="ScoreEntity" >
 		update score set
 			score131 = #{score131,jdbcType=DECIMAL},
+			update_time13 = #{updateTime13,jdbcType=TIMESTAMP},
 			answer131 = #{answer131,jdbcType=VARCHAR},
 			update_time = #{updateTime,jdbcType=TIMESTAMP}
 		where student_id = #{studentId,jdbcType=BIGINT}
@@ -337,12 +359,14 @@
 		insert into score (
 		student_id,
 		score132,
+		update_time13,
 		iscomplete13,
 		answer132,
 		update_time
 		) values(
 		#{studentId,jdbcType=BIGINT},
 		#{score132,jdbcType=DECIMAL},
+		#{updateTime13,jdbcType=TIMESTAMP},
 		#{iscomplete13,jdbcType=INTEGER},
 		#{answer132,jdbcType=VARCHAR},
 		#{updateTime,jdbcType=TIMESTAMP}
@@ -353,6 +377,7 @@
 	<update id="updateSelective1_3_2" parameterType="ScoreEntity" >
 		update score set
 		score132 = #{score132,jdbcType=DECIMAL},
+		update_time13 = #{updateTime13,jdbcType=TIMESTAMP},
 		iscomplete13 = #{iscomplete13,jdbcType=INTEGER},
 		answer132 = #{answer132,jdbcType=VARCHAR},
 		update_time = #{updateTime,jdbcType=TIMESTAMP}

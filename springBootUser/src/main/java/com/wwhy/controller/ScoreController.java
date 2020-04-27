@@ -184,6 +184,7 @@ public class ScoreController{
 	@PostMapping(value="submit1-1-1",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public CommResult submit1_1_1(HttpServletRequest request, ScoreEntity entity){
 		StudentVO student = (StudentVO)redisService.get(request.getHeader("token"));
+		entity.setUpdateTime11(new Date());
 		entity.setUpdateTime(new Date());
 		entity.setStudentId(student.getId());
 		//return CommResult.ok(entity);
@@ -205,6 +206,7 @@ public class ScoreController{
 	@PostMapping(value="submit1-2-1",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public CommResult submit1_2_1(HttpServletRequest request, ScoreEntity entity){
 		StudentVO student = (StudentVO)redisService.get(request.getHeader("token"));
+		entity.setUpdateTime12(new Date());
 		entity.setUpdateTime(new Date());
 		entity.setStudentId(student.getId());
 		//return CommResult.ok(entity);
@@ -226,6 +228,7 @@ public class ScoreController{
 	@PostMapping(value="submit1-2-2",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public CommResult submit1_2_2(HttpServletRequest request, ScoreEntity entity){
 		StudentVO student = (StudentVO)redisService.get(request.getHeader("token"));
+		entity.setUpdateTime12(new Date());
 		entity.setUpdateTime(new Date());
 		entity.setStudentId(student.getId());
 		//return CommResult.ok(entity);
@@ -247,6 +250,7 @@ public class ScoreController{
 	@PostMapping(value="submit1-3-1",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public CommResult submit1_3_1(HttpServletRequest request, ScoreEntity entity){
 		StudentVO student = (StudentVO)redisService.get(request.getHeader("token"));
+		entity.setUpdateTime13(new Date());
 		entity.setUpdateTime(new Date());
 		entity.setStudentId(student.getId());
 		//return CommResult.ok(entity);
@@ -268,6 +272,7 @@ public class ScoreController{
 	@PostMapping(value="submit1-3-2",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public CommResult submit1_3_2(HttpServletRequest request, ScoreEntity entity){
 		StudentVO student = (StudentVO)redisService.get(request.getHeader("token"));
+		entity.setUpdateTime13(new Date());
 		entity.setUpdateTime(new Date());
 		entity.setStudentId(student.getId());
 		//return CommResult.ok(entity);
