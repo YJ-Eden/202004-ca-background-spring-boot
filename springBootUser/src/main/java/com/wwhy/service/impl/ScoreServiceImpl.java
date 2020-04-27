@@ -216,9 +216,23 @@ public class ScoreServiceImpl implements ScoreService {
 	@Override
 	public boolean insertScore1_1_1(ScoreEntity entity){
 		boolean flag=false;
-		int n=scoreDao.countByStudentId(entity.getStudentId());
 		int result;
+		double score = 0;
+		double times;
+		String scoreS;
+		int n=scoreDao.countByStudentId(entity.getStudentId());
+
+		if(n>=1){
+			ScoreEntity entitySql = scoreDao.selectByStudentId(entity.getStudentId());
+			if(entitySql.getScore111()!=null) times = Double.parseDouble(entitySql.getScore111().split("\\^")[1])+1;
+			else times = 1;
+		}
+		else times = 1;
+		scoreS = String.valueOf(score) + "^" + String.valueOf(times);
+
 		entity.setIscomplete11(1);
+		entity.setScore111(scoreS);
+
 		if(n>=1) result = scoreDao.updateSelective1_1_1(entity);
 		else result = scoreDao.insertSelective1_1_1(entity);
 		if(result > 0){
@@ -236,6 +250,8 @@ public class ScoreServiceImpl implements ScoreService {
 	public boolean insertScore1_2_1(ScoreEntity entity){
 		boolean flag=false;
 		double score=0;
+		double times;
+		String scoreS;
 		//12个
 		Double[] answer121 = {12.0,6.0,0.0,0.866,-0.5,0.0,0.5,0.866,0.0,0.0,0.0,1.0};
 		String[] answers121 = entity.getAnswer121().split("\\^");
@@ -249,11 +265,19 @@ public class ScoreServiceImpl implements ScoreService {
 //		for(int i = 0;i<9;i++){
 //			if(answer1212[i].equals(entity.getAnswerarray1212()[i]))score++;
 //		}
-		entity.setScore121(score);
+		int n=scoreDao.countByStudentId(entity.getStudentId());
+		if(n>=1){
+		ScoreEntity entitySql = scoreDao.selectByStudentId(entity.getStudentId());
+		if(entitySql.getScore121()!=null) times = Double.parseDouble(entitySql.getScore111().split("\\^")[1])+1;
+		else times = 1;}
+		else times = 1;
+		scoreS = String.valueOf(score) + "^" + String.valueOf(times);
+
+		entity.setScore121(scoreS);
 		//Double anserarray121[]={1.0,2.0,5.1};
 		//entity.setAnswerarray121(anserarray121);
 
-		int n=scoreDao.countByStudentId(entity.getStudentId());
+
 		int result;
 		if(n>=1) result = scoreDao.updateSelective1_2_1(entity);
 		else result = scoreDao.insertSelective1_2_1(entity);
@@ -272,6 +296,8 @@ public class ScoreServiceImpl implements ScoreService {
 	public boolean insertScore1_2_2(ScoreEntity entity){
 		boolean flag=false;
 		double score=0;
+		double times;
+		String scoreS;
 		//3个
 		Double answer122[] = {11.908,13.562,0.0};
 		String[] answers122 = entity.getAnswer122().split("\\^");
@@ -282,12 +308,22 @@ public class ScoreServiceImpl implements ScoreService {
 //		for(int i = 0;i < 3;i++){
 //			if(answer1221[i].equals(entity.getAnswerarray1221()[i]))score++;
 //		}
-		entity.setScore122(score);
+
+		int n=scoreDao.countByStudentId(entity.getStudentId());
+
+		if(n>=1){
+		ScoreEntity entitySql = scoreDao.selectByStudentId(entity.getStudentId());
+		if(entitySql.getScore122()!=null) times = Double.parseDouble(entitySql.getScore111().split("\\^")[1])+1;
+		else times = 1;}
+		else times = 1;
+		scoreS = String.valueOf(score) + "^" + String.valueOf(times);
+
+		entity.setScore122(scoreS);
 		entity.setIscomplete12(1);
 		//Double anserarray121[]={1.0,2.0,5.1};
 		//entity.setAnswerarray121(anserarray121);
 
-		int n=scoreDao.countByStudentId(entity.getStudentId());
+
 		int result;
 		if(n>=1) result = scoreDao.updateSelective1_2_2(entity);
 		else result = scoreDao.insertSelective1_2_2(entity);
@@ -306,6 +342,8 @@ public class ScoreServiceImpl implements ScoreService {
 	public boolean insertScore1_3_1(ScoreEntity entity){
 		boolean flag=false;
 		double score=0;
+		double times;
+		String scoreS;
 		//36个
 		Double[] answer131 = {1.0,0.0,0.0,3.0,0.0,1.0,0.0,2.0,0.0,0.0,1.0,1.0,
 				0.71,-0.71,0.0,6.0,0.71,0.71,0.0,0.0,0.0,0.0,1.0,0.0,
@@ -314,9 +352,19 @@ public class ScoreServiceImpl implements ScoreService {
 		for(int i = 0;i<36;i++){
 			if(answer131[i].equals(Double.parseDouble(answers131[i])))score++;
 		}
-		entity.setScore131(score);
 
 		int n=scoreDao.countByStudentId(entity.getStudentId());
+
+		if(n>=1){
+		ScoreEntity entitySql = scoreDao.selectByStudentId(entity.getStudentId());
+		if(entitySql.getScore131()!=null) times = Double.parseDouble(entitySql.getScore111().split("\\^")[1])+1;
+		else times = 1;}
+		else times = 1;
+		scoreS = String.valueOf(score) + "^" + String.valueOf(times);
+
+		entity.setScore131(scoreS);
+
+
 		int result;
 		if(n>=1) result = scoreDao.updateSelective1_3_1(entity);
 		else result = scoreDao.insertSelective1_3_1(entity);
@@ -335,6 +383,8 @@ public class ScoreServiceImpl implements ScoreService {
 	public boolean insertScore1_3_2(ScoreEntity entity){
 		boolean flag=false;
 		double score=0;
+		double times;
+		String scoreS;
 		//16个
 		Double answer1321[] = {0.71,0.71,0.0,0.71,-0.71,0.71,0.0,4.95,0.0,0.0,1.0,1.0,0.0,0.0,0.0,1.0};
 		Double answer1322[] = {0.71,0.71,0.0,-1.24,-0.71,0.71,0.0,8.24,0.0,0.0,1.0,1.0,0.0,0.0,0.0,1.0};
@@ -354,12 +404,21 @@ public class ScoreServiceImpl implements ScoreService {
 			}
 		}
 
-		entity.setScore132(score);
+		int n=scoreDao.countByStudentId(entity.getStudentId());
+
+		if(n>=1){
+		ScoreEntity entitySql = scoreDao.selectByStudentId(entity.getStudentId());
+		if(entitySql.getScore132()!=null) times = Double.parseDouble(entitySql.getScore111().split("\\^")[1])+1;
+		else times = 1;}
+		else times = 1;
+		scoreS = String.valueOf(score) + "^" + String.valueOf(times);
+
+		entity.setScore132(scoreS);
 		entity.setIscomplete13(1);
 		//Double anserarray121[]={1.0,2.0,5.1};
 		//entity.setAnswerarray121(anserarray121);
 
-		int n=scoreDao.countByStudentId(entity.getStudentId());
+
 		int result;
 		if(n>=1) result = scoreDao.updateSelective1_3_2(entity);
 		else result = scoreDao.insertSelective1_3_2(entity);

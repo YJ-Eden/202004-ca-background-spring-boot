@@ -51,7 +51,7 @@ public class ScoreEntity extends BasicEntity {
 	private Integer iscomplete11;
 
 	@ApiModelProperty(value = "分数111",name="score111")
-	private Double score111;
+	private String score111;
 
 	@ApiModelProperty(value = "答案111",name="answer111")
 	private String answer111;
@@ -63,13 +63,13 @@ public class ScoreEntity extends BasicEntity {
 	private Integer iscomplete12;
 
 	@ApiModelProperty(value = "分数121",name="score121")
-	private Double score121;
+	private String score121;
 
 	@ApiModelProperty(value = "答案121",name="answer121")
 	private String answer121;
 
 	@ApiModelProperty(value = "分数122",name="score122")
-	private Double score122;
+	private String score122;
 
 	@ApiModelProperty(value = "答案122",name="answer122")
 	private String answer122;
@@ -81,13 +81,13 @@ public class ScoreEntity extends BasicEntity {
 	private Integer iscomplete13;
 
 	@ApiModelProperty(value = "分数131",name="score131")
-	private Double score131;
+	private String score131;
 
 	@ApiModelProperty(value = "答案131",name="answer131")
 	private String answer131;
 
 	@ApiModelProperty(value = "分数132",name="score132")
-	private Double score132;
+	private String score132;
 
 	@ApiModelProperty(value = "答案132",name="answer132")
 	private String answer132;
@@ -167,10 +167,10 @@ public class ScoreEntity extends BasicEntity {
 	public Integer getIscomplete11(){return iscomplete11;}
 	public void setIscomplete11(Integer iscomplete){iscomplete11 = iscomplete;}
 
-	public Double getScore111(){
+	public String getScore111(){
 		return score111;
 	}
-	public void setScore111(Double score){
+	public void setScore111(String score){
 		this.score111 = score;
 	}
 
@@ -187,14 +187,14 @@ public class ScoreEntity extends BasicEntity {
 	public Integer getIscomplete12(){return iscomplete12;}
 	public void setIscomplete12(Integer iscomplete){iscomplete12 = iscomplete;}
 
-	public Double getScore121(){return score121;}
-	public void setScore121(Double score){this.score121 = score;}
+	public String getScore121(){return score121;}
+	public void setScore121(String score){this.score121 = score;}
 
 	public String getAnswer121(){return answer121;}
 	public void setAnswer121(String answer){answer121=answer;}
 
-	public Double getScore122(){return score122;}
-	public void setScore122(Double score){this.score122 = score;}
+	public String getScore122(){return score122;}
+	public void setScore122(String score){this.score122 = score;}
 
 	public String getAnswer122(){return answer122;}
 	public void setAnswer122(String answer){answer122=answer;}
@@ -209,14 +209,14 @@ public class ScoreEntity extends BasicEntity {
 	public Integer getIscomplete13(){return iscomplete13;}
 	public void setIscomplete13(Integer iscomplete){iscomplete13 = iscomplete;}
 
-	public Double getScore131(){return score131;}
-	public void setScore131(Double score){this.score131 = score;}
+	public String getScore131(){return score131;}
+	public void setScore131(String score){this.score131 = score;}
 
 	public String getAnswer131(){return answer131;}
 	public void setAnswer131(String answer){answer131=answer;}
 
-	public Double getScore132(){return score132;}
-	public void setScore132(Double score){this.score132 = score;}
+	public String getScore132(){return score132;}
+	public void setScore132(String score){this.score132 = score;}
 
 	public String getAnswer132(){return answer132;}
 	public void setAnswer132(String answer){answer132=answer;}
