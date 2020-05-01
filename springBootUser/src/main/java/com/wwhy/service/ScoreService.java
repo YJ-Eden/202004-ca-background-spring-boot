@@ -101,4 +101,25 @@ public interface ScoreService{
 	 */
 	public boolean insertScore1_3_2(ScoreEntity entity);
 
+	/**
+	 * 添加2-1-1
+	 * @author eden
+	 * create date:2020-03-26
+	 */
+	public boolean insertScore2_1_1(ScoreEntity entity);
+
+	/**
+	 * 添加2-1-2
+	 * @author eden
+	 * create date:2020-03-26
+	 */
+	public boolean insertScore2_1_2(ScoreEntity entity);
+
+	/**
+	 * 添加2-1-3
+	 * @author eden
+	 * create date:2020-03-26
+	 */
+	public boolean insertScore2_1_3(ScoreEntity entity);
+
 }

@@ -7,23 +7,23 @@ import com.wwhy.vo.StudentVO;
 import com.wwhy.vo.TeacherVO;
 import io.swagger.annotations.*;
 
+import java.io.File;
 import java.util.Date;
 import java.util.List;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import net.sf.json.JSONObject;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import com.github.pagehelper.PageInfo;
 import com.wwhy.common.result.CommResult;
 import com.wwhy.common.result.HttpResult;
 import com.wwhy.vo.ScoreVO;
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  * @author wangpan
@@ -286,6 +286,70 @@ public class ScoreController{
 	}
 
 	/**
+	 * 提交实验报告2-1-1
+	 * @author eden
+	 * create date:2020-03-26
+	 */
+	@ApiOperation(value="提交实验报告2-1-1",response=CommResult.class)
+	@PostMapping(value="submit2-1-1",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public CommResult submit2_1_1(HttpServletRequest request, ScoreEntity entity){
+		StudentVO student = (StudentVO)redisService.get(request.getHeader("token"));
+		entity.setUpdateTime21(new Date());
+		entity.setUpdateTime(new Date());
+		entity.setStudentId(student.getId());
+		//return CommResult.ok(entity);
+		boolean flag=scoreService.insertScore2_1_1(entity);
+
+		if(flag){
+			return CommResult.ok();
+		}
+		return CommResult.error("添加失败。");
+	}
+
+	/**
+	 * 提交实验报告2-1-2
+	 * @author eden
+	 * create date:2020-03-26
+	 */
+	@ApiOperation(value="提交实验报告2-1-2",response=CommResult.class)
+	@PostMapping(value="submit2-1-2",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public CommResult submit2_1_2(HttpServletRequest request, ScoreEntity entity){
+		StudentVO student = (StudentVO)redisService.get(request.getHeader("token"));
+		entity.setUpdateTime21(new Date());
+		entity.setUpdateTime(new Date());
+		entity.setStudentId(student.getId());
+		//return CommResult.ok(entity);
+		boolean flag=scoreService.insertScore2_1_2(entity);
+
+		if(flag){
+			return CommResult.ok();
+		}
+		return CommResult.error("添加失败。");
+	}
+
+	/**
+	 * 提交实验报告2-1-3
+	 * @author eden
+	 * create date:2020-03-26
+	 */
+	@ApiOperation(value="提交实验报告2-1-3",response=CommResult.class)
+	@PostMapping(value="submit2-1-3",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public CommResult submit2_1_3(HttpServletRequest request, ScoreEntity entity){
+		StudentVO student = (StudentVO)redisService.get(request.getHeader("token"));
+		entity.setUpdateTime21(new Date());
+		entity.setUpdateTime(new Date());
+		entity.setStudentId(student.getId());
+		//return CommResult.ok(entity);
+		boolean flag=scoreService.insertScore2_1_3(entity);
+
+		if(flag){
+
+			return CommResult.ok();
+		}
+		return CommResult.error("添加失败。");
+	}
+
+	/**
 	 * 根据student id查询数据
 	 * @author eden
 	 * create date:2019-09-05
@@ -301,4 +365,29 @@ public class ScoreController{
 		ScoreVO vo = scoreService.getScoreByStudentId(student.getId());
 		return CommResult.ok(vo);
 	}
+
+	/**
+	 * bvh文件上传
+	 * @author eden
+	 * create date:2019-09-05
+	 */
+	@ApiOperation(value="bvh文件上传", response=CommResult.class)
+	@RequestMapping(value = "bvhFileUpLoad",method = RequestMethod.POST)
+	public CommResult singleFileUpload(HttpServletRequest request,@RequestParam("file") MultipartFile file){
+		StudentVO student = (StudentVO)redisService.get(request.getHeader("token"));
+		//String fileName = file.getOriginalFilename();
+		String fileName = student.getName()+".bvh";
+		StringBuilder stringBuilder = new StringBuilder();
+		//File fileDir = new File("/Users/eden/Desktop/");
+		File fileDir = new File("/root/8079/");
+		String path = fileDir.getAbsolutePath();
+		try{
+			file.transferTo(new File(path,fileName));
+		}catch(Exception e){
+			return CommResult.error(e);
+		}
+
+		return CommResult.ok();
+	}
+
 }

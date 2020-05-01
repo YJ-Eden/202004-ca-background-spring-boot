@@ -268,7 +268,7 @@ public class ScoreServiceImpl implements ScoreService {
 		int n=scoreDao.countByStudentId(entity.getStudentId());
 		if(n>=1){
 		ScoreEntity entitySql = scoreDao.selectByStudentId(entity.getStudentId());
-		if(entitySql.getScore121()!=null) times = Double.parseDouble(entitySql.getScore111().split("\\^")[1])+1;
+		if(entitySql.getScore121()!=null) times = Double.parseDouble(entitySql.getScore121().split("\\^")[1])+1;
 		else times = 1;}
 		else times = 1;
 		scoreS = String.valueOf(score) + "^" + String.valueOf(times);
@@ -299,7 +299,7 @@ public class ScoreServiceImpl implements ScoreService {
 		double times;
 		String scoreS;
 		//3个
-		Double answer122[] = {11.908,13.562,0.0};
+		Double answer122[] = {11.098,13.562,0.0};
 		String[] answers122 = entity.getAnswer122().split("\\^");
 		for(int i = 0;i<3;i++){
 			if(answer122[i].equals(Double.parseDouble(answers122[i])))score++;
@@ -313,7 +313,7 @@ public class ScoreServiceImpl implements ScoreService {
 
 		if(n>=1){
 		ScoreEntity entitySql = scoreDao.selectByStudentId(entity.getStudentId());
-		if(entitySql.getScore122()!=null) times = Double.parseDouble(entitySql.getScore111().split("\\^")[1])+1;
+		if(entitySql.getScore122()!=null) times = Double.parseDouble(entitySql.getScore122().split("\\^")[1])+1;
 		else times = 1;}
 		else times = 1;
 		scoreS = String.valueOf(score) + "^" + String.valueOf(times);
@@ -357,7 +357,7 @@ public class ScoreServiceImpl implements ScoreService {
 
 		if(n>=1){
 		ScoreEntity entitySql = scoreDao.selectByStudentId(entity.getStudentId());
-		if(entitySql.getScore131()!=null) times = Double.parseDouble(entitySql.getScore111().split("\\^")[1])+1;
+		if(entitySql.getScore131()!=null) times = Double.parseDouble(entitySql.getScore131().split("\\^")[1])+1;
 		else times = 1;}
 		else times = 1;
 		scoreS = String.valueOf(score) + "^" + String.valueOf(times);
@@ -408,7 +408,7 @@ public class ScoreServiceImpl implements ScoreService {
 
 		if(n>=1){
 		ScoreEntity entitySql = scoreDao.selectByStudentId(entity.getStudentId());
-		if(entitySql.getScore132()!=null) times = Double.parseDouble(entitySql.getScore111().split("\\^")[1])+1;
+		if(entitySql.getScore132()!=null) times = Double.parseDouble(entitySql.getScore132().split("\\^")[1])+1;
 		else times = 1;}
 		else times = 1;
 		scoreS = String.valueOf(score) + "^" + String.valueOf(times);
@@ -422,6 +422,123 @@ public class ScoreServiceImpl implements ScoreService {
 		int result;
 		if(n>=1) result = scoreDao.updateSelective1_3_2(entity);
 		else result = scoreDao.insertSelective1_3_2(entity);
+		if(result > 0){
+			flag = true;
+		}
+		return flag;
+	}
+
+	/**
+	 * 添加2-1-1
+	 * @author eden
+	 * create date:2020-03-26
+	 */
+	@Override
+	public boolean insertScore2_1_1(ScoreEntity entity){
+		boolean flag=false;
+		double score=0;
+		double times;
+		String scoreS;
+		//2个
+		Double[] answer211 = {1.0,2.0};
+		String[] answers211 = entity.getAnswer211().split("\\^");
+		for(int i = 0;i<2;i++){
+			if(answer211[i].equals(Double.parseDouble(answers211[i])))score++;
+		}
+
+		int n=scoreDao.countByStudentId(entity.getStudentId());
+
+		if(n>=1){
+			ScoreEntity entitySql = scoreDao.selectByStudentId(entity.getStudentId());
+			if(entitySql.getScore211()!=null) times = Double.parseDouble(entitySql.getScore211().split("\\^")[1])+1;
+			else times = 1;}
+		else times = 1;
+		scoreS = String.valueOf(score) + "^" + String.valueOf(times);
+
+		entity.setScore211(scoreS);
+
+
+		int result;
+		if(n>=1) result = scoreDao.updateSelective2_1_1(entity);
+		else result = scoreDao.insertSelective2_1_1(entity);
+		if(result > 0){
+			flag = true;
+		}
+		return flag;
+	}
+
+	/**
+	 * 添加2-1-2
+	 * @author eden
+	 * create date:2020-03-26
+	 */
+	@Override
+	public boolean insertScore2_1_2(ScoreEntity entity){
+		boolean flag=false;
+		double score=0;
+		double times;
+		String scoreS;
+		//10个
+		Double[] answer212 = {1.0,2.0,0.0,1.0,0.0,0.0,1.0,1.0,1.0,1.0};
+		String[] answers212 = entity.getAnswer212().split("\\^");
+		for(int i = 0;i<10;i++){
+			if(answer212[i].equals(Double.parseDouble(answers212[i])))score++;
+		}
+
+		int n=scoreDao.countByStudentId(entity.getStudentId());
+
+		if(n>=1){
+			ScoreEntity entitySql = scoreDao.selectByStudentId(entity.getStudentId());
+			if(entitySql.getScore212()!=null) times = Double.parseDouble(entitySql.getScore212().split("\\^")[1])+1;
+			else times = 1;}
+		else times = 1;
+		scoreS = String.valueOf(score) + "^" + String.valueOf(times);
+
+		entity.setScore212(scoreS);
+
+
+		int result;
+		if(n>=1) result = scoreDao.updateSelective2_1_2(entity);
+		else result = scoreDao.insertSelective2_1_2(entity);
+		if(result > 0){
+			flag = true;
+		}
+		return flag;
+	}
+
+	/**
+	 * 添加2-1-3
+	 * @author eden
+	 * create date:2020-03-26
+	 */
+	@Override
+	public boolean insertScore2_1_3(ScoreEntity entity){
+		boolean flag=false;
+		double score=0;
+		double times;
+		String scoreS;
+		//6个
+		Double[] answer213 = {1.0,2.0,2.0,1.0,2.0,1.0};
+		String[] answers213 = entity.getAnswer213().split("\\^");
+		for(int i = 0;i<6;i++){
+			if(answer213[i].equals(Double.parseDouble(answers213[i])))score++;
+		}
+
+		int n=scoreDao.countByStudentId(entity.getStudentId());
+
+		if(n>=1){
+			ScoreEntity entitySql = scoreDao.selectByStudentId(entity.getStudentId());
+			if(entitySql.getScore213()!=null) times = Double.parseDouble(entitySql.getScore213().split("\\^")[1])+1;
+			else times = 1;}
+		else times = 1;
+		scoreS = String.valueOf(score) + "^" + String.valueOf(times);
+
+		entity.setScore213(scoreS);
+		entity.setIscomplete21(1);
+
+		int result;
+		if(n>=1) result = scoreDao.updateSelective2_1_3(entity);
+		else result = scoreDao.insertSelective2_1_3(entity);
 		if(result > 0){
 			flag = true;
 		}

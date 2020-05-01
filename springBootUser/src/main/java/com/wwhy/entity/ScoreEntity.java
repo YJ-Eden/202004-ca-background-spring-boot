@@ -92,6 +92,29 @@ public class ScoreEntity extends BasicEntity {
 	@ApiModelProperty(value = "答案132",name="answer132")
 	private String answer132;
 
+	@ApiModelProperty(value = "更新时间21",name="updateTime11")
+	private Date updateTime21;
+
+	@ApiModelProperty(value = "是否完成21",name="iscomplete11")
+	private Integer iscomplete21;
+
+	@ApiModelProperty(value = "分数211",name="score111")
+	private String score211;
+
+	@ApiModelProperty(value = "答案211",name="answer111")
+	private String answer211;
+
+	@ApiModelProperty(value = "分数212",name="score111")
+	private String score212;
+
+	@ApiModelProperty(value = "答案212",name="answer111")
+	private String answer212;
+
+	@ApiModelProperty(value = "分数213",name="score111")
+	private String score213;
+
+	@ApiModelProperty(value = "答案213",name="answer111")
+	private String answer213;
 
 
 	public Long getId(){
@@ -220,5 +243,45 @@ public class ScoreEntity extends BasicEntity {
 
 	public String getAnswer132(){return answer132;}
 	public void setAnswer132(String answer){answer132=answer;}
+
+	public Date getUpdateTime21(){
+		return updateTime21;
+	}
+	public void setUpdateTime21(Date updateTime){
+		updateTime21 = updateTime;
+	}
+
+	public Integer getIscomplete21(){return iscomplete21;}
+	public void setIscomplete21(Integer iscomplete){iscomplete21 = iscomplete;}
+
+	public String getScore211(){
+		return score211;
+	}
+	public void setScore211(String score){
+		this.score211 = score;
+	}
+
+	public String getAnswer211(){return answer211;}
+	public void setAnswer211(String answer){answer211=answer;}
+
+	public String getScore212(){
+		return score212;
+	}
+	public void setScore212(String score){
+		this.score212 = score;
+	}
+
+	public String getAnswer212(){return answer212;}
+	public void setAnswer212(String answer){answer212=answer;}
+
+	public String getScore213(){
+		return score213;
+	}
+	public void setScore213(String score){
+		this.score213 = score;
+	}
+
+	public String getAnswer213(){return answer213;}
+	public void setAnswer213(String answer){answer213=answer;}
 
 }
