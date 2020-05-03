@@ -122,4 +122,11 @@ public interface ScoreService{
 	 */
 	public boolean insertScore2_1_3(ScoreEntity entity);
 
+	/**
+	 * 添加2-2-3
+	 * @author eden
+	 * create date:2020-03-26
+	 */
+	public boolean insertScore2_2_3(ScoreEntity entity);
+
 }

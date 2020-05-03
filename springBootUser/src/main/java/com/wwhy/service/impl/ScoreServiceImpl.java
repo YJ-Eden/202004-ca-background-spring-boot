@@ -385,12 +385,14 @@ public class ScoreServiceImpl implements ScoreService {
 		double score=0;
 		double times;
 		String scoreS;
+		//4个
+		Double answer1320[] = {8.75,-0.71,3.54,1.0};
 		//16个
 		Double answer1321[] = {0.71,0.71,0.0,0.71,-0.71,0.71,0.0,4.95,0.0,0.0,1.0,1.0,0.0,0.0,0.0,1.0};
 		Double answer1322[] = {0.71,0.71,0.0,-1.24,-0.71,0.71,0.0,8.24,0.0,0.0,1.0,1.0,0.0,0.0,0.0,1.0};
 		String[] answers132 = entity.getAnswer132().split("\\^");
 		for(int i = 0;i<4;i++){
-			if(Double.parseDouble(answers132[i])==0.0)score++;
+			if(answer1320[i].equals(Double.parseDouble(answers132[i])))score++;
 		}
 		score++;
 		if(Double.parseDouble(answers132[4])==0.0){
@@ -539,6 +541,39 @@ public class ScoreServiceImpl implements ScoreService {
 		int result;
 		if(n>=1) result = scoreDao.updateSelective2_1_3(entity);
 		else result = scoreDao.insertSelective2_1_3(entity);
+		if(result > 0){
+			flag = true;
+		}
+		return flag;
+	}
+
+	/**
+	 * 添加2-2-3
+	 * @author eden
+	 * create date:2020-03-26
+	 */
+	@Override
+	public boolean insertScore2_2_3(ScoreEntity entity){
+		boolean flag=false;
+		int result;
+		double score = 0;
+		double times;
+		String scoreS;
+		int n=scoreDao.countByStudentId(entity.getStudentId());
+
+		if(n>=1){
+			ScoreEntity entitySql = scoreDao.selectByStudentId(entity.getStudentId());
+			if(entitySql.getScore223()!=null) times = Double.parseDouble(entitySql.getScore223().split("\\^")[1])+1;
+			else times = 1;
+		}
+		else times = 1;
+		scoreS = String.valueOf(score) + "^" + String.valueOf(times);
+
+		entity.setIscomplete22(1);
+		entity.setScore223(scoreS);
+
+		if(n>=1) result = scoreDao.updateSelective2_2_3(entity);
+		else result = scoreDao.insertSelective2_2_3(entity);
 		if(result > 0){
 			flag = true;
 		}

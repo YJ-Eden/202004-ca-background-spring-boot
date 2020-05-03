@@ -7,11 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82c051df-8e5d-47c8-a60a-6136480c2d70" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/user_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/user_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springBootUser/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/controller/ScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/controller/ScoreController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/dao/ScoreDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/dao/ScoreDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/dao/mapper/ScoreMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/dao/mapper/ScoreMapper.xml" afterDir="false" />
@@ -19,8 +16,6 @@
       <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/service/ScoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/service/ScoreService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/service/impl/ScoreServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/service/impl/ScoreServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/vo/ScoreVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/vo/ScoreVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springBootUser/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/resources/application-prod.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springBootUser/src/main/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/resources/application-test.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -194,6 +189,9 @@
       <workItem from="1588242356882" duration="197000" />
       <workItem from="1588250664576" duration="3368000" />
       <workItem from="1588254618820" duration="361000" />
+      <workItem from="1588339466900" duration="242000" />
+      <workItem from="1588341139343" duration="315000" />
+      <workItem from="1588470989052" duration="811000" />
     </task>
     <servers />
   </component>
