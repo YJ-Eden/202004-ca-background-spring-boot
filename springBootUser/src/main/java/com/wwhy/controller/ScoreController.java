@@ -400,8 +400,11 @@ public class ScoreController{
 		//String fileName = file.getOriginalFilename();
 		String fileName = student.getName()+".bvh";
 		StringBuilder stringBuilder = new StringBuilder();
+		String host = request.getHeader("Origin");
+		String[]server = host.split("\\:");
 		//File fileDir = new File("/Users/eden/Desktop/");
-		File fileDir = new File("/root/8079/");
+		//File fileDir = new File("/root/8079/");
+		File fileDir = new File("/root/"+server[2]+"/");
 		String path = fileDir.getAbsolutePath();
 		try{
 			file.transferTo(new File(path,fileName));

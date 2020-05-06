@@ -10,12 +10,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/user_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/user_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/controller/ScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/controller/ScoreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/dao/ScoreDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/dao/ScoreDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/dao/mapper/ScoreMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/dao/mapper/ScoreMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/entity/ScoreEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/entity/ScoreEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/service/ScoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/service/ScoreService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/service/impl/ScoreServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/service/impl/ScoreServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/vo/ScoreVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/vo/ScoreVO.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +35,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1TWKDX4Kr0Rgd8sKKfRRHyWhSk8" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -192,6 +189,8 @@
       <workItem from="1588339466900" duration="242000" />
       <workItem from="1588341139343" duration="315000" />
       <workItem from="1588470989052" duration="811000" />
+      <workItem from="1588732793084" duration="506000" />
+      <workItem from="1588734734739" duration="83000" />
     </task>
     <servers />
   </component>
