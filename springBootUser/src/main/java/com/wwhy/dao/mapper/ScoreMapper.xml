@@ -29,6 +29,11 @@
 		<result column="update_time22" property="updateTime22" jdbcType="TIMESTAMP" />
 		<result column="iscomplete22" property="iscomplete22" jdbcType="INTEGER"/>
 		<result column="score223" property="score223" jdbcType="VARCHAR"/>
+		<result column="update_time23" property="updateTime23" jdbcType="TIMESTAMP" />
+		<result column="iscomplete23" property="iscomplete23" jdbcType="INTEGER"/>
+		<result column="score231" property="score231" jdbcType="VARCHAR"/>
+		<result column="score232" property="score232" jdbcType="VARCHAR"/>
+		<result column="score233" property="score233" jdbcType="VARCHAR"/>
 	</resultMap>
 	<sql id="Base_Column_List" >
 		id,student_id,project,unit,score,ranking,teacher_id,update_time,remark,
@@ -36,7 +41,8 @@
 		update_time12,iscomplete12,score121,score122,
 		update_time13,iscomplete13,score131,score132,
 		update_time21,iscomplete21,score211,score212,score213,
-		update_time22,iscomplete22,score223
+		update_time22,iscomplete22,score223,
+		update_time23,iscomplete23,score231,score232,score233
 	</sql>
 	<!-- 根据ID查询数据 -->
 	<select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
@@ -523,6 +529,99 @@
 		update_time22=#{updateTime22,jdbcType=TIMESTAMP},
 		iscomplete22=#{iscomplete22,jdbcType=INTEGER},
 		answer223=#{answer223,jdbcType=VARCHAR},
+		update_time = #{updateTime,jdbcType=TIMESTAMP}
+		where student_id = #{studentId,jdbcType=BIGINT}
+	</update>
+
+	<!-- 添加记录2_3_1 -->
+	<insert id="insertSelective2_3_1" parameterType="com.wwhy.entity.ScoreEntity">
+		<selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		insert into score (
+		student_id,
+		score231,
+		update_time23,
+		answer231,
+		update_time
+		) values(
+		#{studentId,jdbcType=BIGINT},
+		#{score231,jdbcType=VARCHAR},
+		#{updateTime23,jdbcType=TIMESTAMP},
+		#{answer231,jdbcType=VARCHAR},
+		#{updateTime,jdbcType=TIMESTAMP}
+		)
+	</insert>
+
+	<!-- 根据ID修改数据2_3_1 -->
+	<update id="updateSelective2_3_1" parameterType="ScoreEntity" >
+		update score set
+		score231 = #{score231,jdbcType=VARCHAR},
+		update_time23=#{updateTime23,jdbcType=TIMESTAMP},
+		answer231=#{answer231,jdbcType=VARCHAR},
+		update_time = #{updateTime,jdbcType=TIMESTAMP}
+		where student_id = #{studentId,jdbcType=BIGINT}
+	</update>
+
+	<!-- 添加记录2_3_2 -->
+	<insert id="insertSelective2_3_2" parameterType="com.wwhy.entity.ScoreEntity">
+		<selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		insert into score (
+		student_id,
+		score232,
+		update_time23,
+		answer232,
+		update_time
+		) values(
+		#{studentId,jdbcType=BIGINT},
+		#{score232,jdbcType=VARCHAR},
+		#{updateTime23,jdbcType=TIMESTAMP},
+		#{answer232,jdbcType=VARCHAR},
+		#{updateTime,jdbcType=TIMESTAMP}
+		)
+	</insert>
+
+	<!-- 根据ID修改数据2_3_2 -->
+	<update id="updateSelective2_3_2" parameterType="ScoreEntity" >
+		update score set
+		score232 = #{score232,jdbcType=VARCHAR},
+		update_time23=#{updateTime23,jdbcType=TIMESTAMP},
+		answer232=#{answer232,jdbcType=VARCHAR},
+		update_time = #{updateTime,jdbcType=TIMESTAMP}
+		where student_id = #{studentId,jdbcType=BIGINT}
+	</update>
+
+	<!-- 添加记录2_3_3 -->
+	<insert id="insertSelective2_3_3" parameterType="com.wwhy.entity.ScoreEntity">
+		<selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER">
+			SELECT LAST_INSERT_ID()
+		</selectKey>
+		insert into score (
+		student_id,
+		score233,
+		update_time23,
+		iscomplete23,
+		answer233,
+		update_time
+		) values(
+		#{studentId,jdbcType=BIGINT},
+		#{score233,jdbcType=VARCHAR},
+		#{updateTime23,jdbcType=TIMESTAMP},
+		#{iscomplete23,jdbcType=INTEGER},
+		#{answer233,jdbcType=VARCHAR},
+		#{updateTime,jdbcType=TIMESTAMP}
+		)
+	</insert>
+
+	<!-- 根据ID修改数据2_3_3 -->
+	<update id="updateSelective2_3_3" parameterType="ScoreEntity" >
+		update score set
+		score233 = #{score233,jdbcType=VARCHAR},
+		update_time23=#{updateTime23,jdbcType=TIMESTAMP},
+		iscomplete23=#{iscomplete23,jdbcType=INTEGER},
+		answer233=#{answer233,jdbcType=VARCHAR},
 		update_time = #{updateTime,jdbcType=TIMESTAMP}
 		where student_id = #{studentId,jdbcType=BIGINT}
 	</update>

@@ -372,6 +372,72 @@ public class ScoreController{
 	}
 
 	/**
+	 * 提交实验报告2-3-1
+	 * @author eden
+	 * create date:2020-03-26
+	 */
+	@ApiOperation(value="提交实验报告2-3-1",response=CommResult.class)
+	@PostMapping(value="submit2-3-1",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public CommResult submit2_3_1(HttpServletRequest request, ScoreEntity entity){
+		StudentVO student = (StudentVO)redisService.get(request.getHeader("token"));
+		entity.setUpdateTime23(new Date());
+		entity.setUpdateTime(new Date());
+		entity.setStudentId(student.getId());
+		//return CommResult.ok(entity);
+		boolean flag=scoreService.insertScore2_3_1(entity);
+
+		if(flag){
+			return CommResult.ok();
+		}
+		return CommResult.error("添加失败。");
+
+	}
+
+	/**
+	 * 提交实验报告2-3-2
+	 * @author eden
+	 * create date:2020-03-26
+	 */
+	@ApiOperation(value="提交实验报告2-3-2",response=CommResult.class)
+	@PostMapping(value="submit2-3-2",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public CommResult submit2_3_2(HttpServletRequest request, ScoreEntity entity){
+		StudentVO student = (StudentVO)redisService.get(request.getHeader("token"));
+		entity.setUpdateTime23(new Date());
+		entity.setUpdateTime(new Date());
+		entity.setStudentId(student.getId());
+		//return CommResult.ok(entity);
+		boolean flag=scoreService.insertScore2_3_2(entity);
+
+		if(flag){
+			return CommResult.ok();
+		}
+		return CommResult.error("添加失败。");
+
+	}
+
+	/**
+	 * 提交实验报告2-3-3
+	 * @author eden
+	 * create date:2020-03-26
+	 */
+	@ApiOperation(value="提交实验报告2-3-3",response=CommResult.class)
+	@PostMapping(value="submit2-3-3",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public CommResult submit2_3_3(HttpServletRequest request, ScoreEntity entity){
+		StudentVO student = (StudentVO)redisService.get(request.getHeader("token"));
+		entity.setUpdateTime23(new Date());
+		entity.setUpdateTime(new Date());
+		entity.setStudentId(student.getId());
+		//return CommResult.ok(entity);
+		boolean flag=scoreService.insertScore2_3_3(entity);
+
+		if(flag){
+			return CommResult.ok();
+		}
+		return CommResult.error("添加失败。");
+
+	}
+
+	/**
 	 * 根据student id查询数据
 	 * @author eden
 	 * create date:2019-09-05

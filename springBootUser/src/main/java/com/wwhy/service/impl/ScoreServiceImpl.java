@@ -579,4 +579,431 @@ public class ScoreServiceImpl implements ScoreService {
 		}
 		return flag;
 	}
+
+	/**
+	 * 添加2-3-1
+	 * @author eden
+	 * create date:2020-03-26
+	 */
+	@Override
+	public boolean insertScore2_3_1(ScoreEntity entity){
+		boolean flag=false;
+		double score=0;
+		double times;
+		String scoreS;
+		//90个
+		Integer[] answer231 = {1,1,4,3,7,11,3,7,11,
+				2,2,2,4,0,0,4,0,0,
+				3,3,2,5,0,0,5,0,0,
+				4,4,2,6,0,0,6,0,0,
+				5,5,1,0,0,0,0,0,0,
+				2,2,2,8,0,0,8,0,0,
+				7,7,2,9,0,0,9,0,0,
+				8,8,2,10,0,0,10,0,0,
+				9,9,1,0,0,0,0,0,0,
+				2,2,1,0,0,0,0,0,0};
+
+		String[] answers231 = entity.getAnswer231().split("\\^");
+		int answerNumber;
+		int[] isOk={0,0,0};
+		int i=0;
+
+		//joint 1
+		for(int k = 0;k<2;k++){
+			if(answer231[i].equals(Integer.parseInt(answers231[i++])))score++;
+		}
+		if(answer231[i].equals(Integer.parseInt(answers231[i++]))){
+			score++;
+			for(int q = 0;q<3;q++)isOk[q]=0;
+			answerNumber = Integer.parseInt(answers231[i-1])-1;
+			score+=(3-answerNumber)*2;
+			for(int k = 0;k<answerNumber;k++){
+				switch (Integer.parseInt(answers231[i])){
+					case 3:
+						if(isOk[0]<1){
+							score++;
+							if(Integer.parseInt(answers231[i])==Integer.parseInt(answers231[i+3]))score++;
+						}
+						isOk[0]++;
+						break;
+					case 7:
+						if(isOk[1]<1){
+							score++;
+							if(Integer.parseInt(answers231[i])==Integer.parseInt(answers231[i+3]))score++;
+						}
+						isOk[1]++;
+						break;
+					case 11:
+						if(isOk[2]<1){
+							score++;
+							if(Integer.parseInt(answers231[i])==Integer.parseInt(answers231[i+3]))score++;
+						}
+						isOk[2]++;
+						break;
+				}
+				i++;
+			}
+			i=i+6-answerNumber;
+		}
+		else i=i+6;
+
+		//joint 2
+		for(int k = 0;k<2;k++){
+			if(answer231[i].equals(Integer.parseInt(answers231[i++])))score++;
+		}
+		if(answer231[i].equals(Integer.parseInt(answers231[i++]))){
+			score++;
+			for(int q = 0;q<3;q++)isOk[q]=0;
+			answerNumber = Integer.parseInt(answers231[i-1])-1;
+			score+=(3-answerNumber)*2;
+			for(int k = 0;k<answerNumber;k++){
+				switch (Integer.parseInt(answers231[i])){
+					case 4:
+						if(isOk[0]<1){
+							score++;
+							if(Integer.parseInt(answers231[i])==Integer.parseInt(answers231[i+3]))score++;
+						}
+						isOk[0]++;
+						break;
+				}
+				i++;
+			}
+			i=i+6-answerNumber;
+		}
+		else i=i+6;
+
+		//joint 3
+		for(int k = 0;k<2;k++){
+			if(answer231[i].equals(Integer.parseInt(answers231[i++])))score++;
+		}
+		if(answer231[i].equals(Integer.parseInt(answers231[i++]))){
+			score++;
+			for(int q = 0;q<3;q++)isOk[q]=0;
+			answerNumber = Integer.parseInt(answers231[i-1])-1;
+			score+=(3-answerNumber)*2;
+			for(int k = 0;k<answerNumber;k++){
+				switch (Integer.parseInt(answers231[i])){
+					case 5:
+						if(isOk[0]<1){
+							score++;
+							if(Integer.parseInt(answers231[i])==Integer.parseInt(answers231[i+3]))score++;
+						}
+						isOk[0]++;
+						break;
+				}
+				i++;
+			}
+			i=i+6-answerNumber;
+		}
+		else i=i+6;
+
+		//joint 4
+		for(int k = 0;k<2;k++){
+			if(answer231[i].equals(Integer.parseInt(answers231[i++])))score++;
+		}
+		if(answer231[i].equals(Integer.parseInt(answers231[i++]))){
+			score++;
+			for(int q = 0;q<3;q++)isOk[q]=0;
+			answerNumber = Integer.parseInt(answers231[i-1])-1;
+			score+=(3-answerNumber)*2;
+			for(int k = 0;k<answerNumber;k++){
+				switch (Integer.parseInt(answers231[i])){
+					case 6:
+						if(isOk[0]<1){
+							score++;
+							if(Integer.parseInt(answers231[i])==Integer.parseInt(answers231[i+3]))score++;
+						}
+						isOk[0]++;
+						break;
+				}
+				i++;
+			}
+			i=i+6-answerNumber;
+		}
+		else i=i+6;
+
+		//joint 5
+		for(int k = 0;k<2;k++){
+			if(answer231[i].equals(Integer.parseInt(answers231[i++])))score++;
+		}
+		if(answer231[i].equals(Integer.parseInt(answers231[i++]))){
+			score++;
+			for(int q = 0;q<3;q++)isOk[q]=0;
+			answerNumber = Integer.parseInt(answers231[i-1])-1;
+			score+=(3-answerNumber)*2;
+			i=i+6-answerNumber;
+		}
+		else i=i+6;
+
+		//joint 6
+		for(int k = 0;k<2;k++){
+			if(answer231[i].equals(Integer.parseInt(answers231[i++])))score++;
+		}
+		if(answer231[i].equals(Integer.parseInt(answers231[i++]))){
+			score++;
+			for(int q = 0;q<3;q++)isOk[q]=0;
+			answerNumber = Integer.parseInt(answers231[i-1])-1;
+			score+=(3-answerNumber)*2;
+			for(int k = 0;k<answerNumber;k++){
+				switch (Integer.parseInt(answers231[i])){
+					case 8:
+						if(isOk[0]<1){
+							score++;
+							if(Integer.parseInt(answers231[i])==Integer.parseInt(answers231[i+3]))score++;
+						}
+						isOk[0]++;
+						break;
+				}
+				i++;
+			}
+			i=i+6-answerNumber;
+		}
+		else i=i+6;
+
+		//joint 7
+		for(int k = 0;k<2;k++){
+			if(answer231[i].equals(Integer.parseInt(answers231[i++])))score++;
+		}
+		if(answer231[i].equals(Integer.parseInt(answers231[i++]))){
+			score++;
+			for(int q = 0;q<3;q++)isOk[q]=0;
+			answerNumber = Integer.parseInt(answers231[i-1])-1;
+			score+=(3-answerNumber)*2;
+			for(int k = 0;k<answerNumber;k++){
+				switch (Integer.parseInt(answers231[i])){
+					case 9:
+						if(isOk[0]<1){
+							score++;
+							if(Integer.parseInt(answers231[i])==Integer.parseInt(answers231[i+3]))score++;
+						}
+						isOk[0]++;
+						break;
+				}
+				i++;
+			}
+			i=i+6-answerNumber;
+		}
+		else i=i+6;
+
+		//joint 8
+		for(int k = 0;k<2;k++){
+			if(answer231[i].equals(Integer.parseInt(answers231[i++])))score++;
+		}
+		if(answer231[i].equals(Integer.parseInt(answers231[i++]))){
+			score++;
+			for(int q = 0;q<3;q++)isOk[q]=0;
+			answerNumber = Integer.parseInt(answers231[i-1])-1;
+			score+=(3-answerNumber)*2;
+			for(int k = 0;k<answerNumber;k++){
+				switch (Integer.parseInt(answers231[i])){
+					case 10:
+						if(isOk[0]<1){
+							score++;
+							if(Integer.parseInt(answers231[i])==Integer.parseInt(answers231[i+3]))score++;
+						}
+						isOk[0]++;
+						break;
+				}
+				i++;
+			}
+			i=i+6-answerNumber;
+		}
+		else i=i+6;
+
+		//joint 9
+		for(int k = 0;k<2;k++){
+			if(answer231[i].equals(Integer.parseInt(answers231[i++])))score++;
+		}
+		if(answer231[i].equals(Integer.parseInt(answers231[i++]))){
+			score++;
+			for(int q = 0;q<3;q++)isOk[q]=0;
+			answerNumber = Integer.parseInt(answers231[i-1])-1;
+			score+=(3-answerNumber)*2;
+			i=i+6-answerNumber;
+		}
+		else i=i+6;
+
+		//joint 10
+		for(int k = 0;k<2;k++){
+			if(answer231[i].equals(Integer.parseInt(answers231[i++])))score++;
+		}
+		if(answer231[i].equals(Integer.parseInt(answers231[i++]))){
+			score++;
+			for(int q = 0;q<3;q++)isOk[q]=0;
+			answerNumber = Integer.parseInt(answers231[i-1])-1;
+			score+=(3-answerNumber)*2;
+			i=i+6-answerNumber;
+		}
+		else i=i+6;
+
+		//TODO
+//		for(int i = 0;i<90;i++){
+//			if(answer231[i].equals(Integer.parseInt(answers231[i])))score++;
+//		}
+
+		int n=scoreDao.countByStudentId(entity.getStudentId());
+
+		if(n>=1){
+			ScoreEntity entitySql = scoreDao.selectByStudentId(entity.getStudentId());
+			if(entitySql.getScore231()!=null) times = Double.parseDouble(entitySql.getScore231().split("\\^")[1])+1;
+			else times = 1;}
+		else times = 1;
+		scoreS = String.valueOf(score) + "^" + String.valueOf(times);
+
+		entity.setScore231(scoreS);
+
+
+		int result;
+		if(n>=1) result = scoreDao.updateSelective2_3_1(entity);
+		else result = scoreDao.insertSelective2_3_1(entity);
+		if(result > 0){
+			flag = true;
+		}
+		return flag;
+	}
+
+	/**
+	 * 添加2-3-2
+	 * @author eden
+	 * create date:2020-03-26
+	 */
+	@Override
+	public boolean insertScore2_3_2(ScoreEntity entity){
+		boolean flag=false;
+		double score=0;
+		double times;
+		String scoreS;
+		//18个
+		Integer[] answer232 = {1,10,0,1,1,10,0,1,1,1,10,0,0,1,0,1,1,10};
+		String[] answers232 = entity.getAnswer232().split("\\^");
+		for(int i = 0;i<18;i++){
+			if(answer232[i].equals(Integer.parseInt(answers232[i])))score++;
+		}
+
+		int n=scoreDao.countByStudentId(entity.getStudentId());
+
+		if(n>=1){
+			ScoreEntity entitySql = scoreDao.selectByStudentId(entity.getStudentId());
+			if(entitySql.getScore232()!=null) times = Double.parseDouble(entitySql.getScore232().split("\\^")[1])+1;
+			else times = 1;}
+		else times = 1;
+		scoreS = String.valueOf(score) + "^" + String.valueOf(times);
+
+		entity.setScore232(scoreS);
+
+
+		int result;
+		if(n>=1) result = scoreDao.updateSelective2_3_2(entity);
+		else result = scoreDao.insertSelective2_3_2(entity);
+		if(result > 0){
+			flag = true;
+		}
+		return flag;
+	}
+
+	/**
+	 * 添加2-3-2
+	 * @author eden
+	 * create date:2020-03-26
+	 */
+	@Override
+	public boolean insertScore2_3_3(ScoreEntity entity){
+		boolean flag=false;
+		double score=0;
+		double times;
+		String scoreS;
+		//18个
+		Integer[] answer2331 = {4,5,0,8,8,7,7,6,6,1,1,2,2,3,3,4,4,5};
+		//19个
+		Integer[] answer2333 = {0,0,8,0,8,8,7,7,6,6,1,1,2,2,3,3,4,4,5};
+		String[] answers233 = entity.getAnswer233().split("\\^");
+		for(int i = 0;i<18;i++){
+			if(answer2331[i].equals(Integer.parseInt(answers233[i])))score++;
+		}
+		for(int i=0;i<7;i++){
+			if(Integer.parseInt(answers233[5*i+18])==0)score++;
+			switch (Integer.parseInt(answers233[5*i+19])){
+				case 4:
+					score++;
+					//3个
+					Integer[] answer23324 = {4,4,5};
+					for(int j = 0;j<3;j++){
+						if(answer23324[j].equals(Integer.parseInt(answers233[5*i+20+j])))score++;
+					}
+					break;
+				case 3:
+					score++;
+					//3个
+					Integer[] answer23323 = {3,3,4};
+					for(int j = 0;j<3;j++){
+						if(answer23323[j].equals(Integer.parseInt(answers233[5*i+20+j])))score++;
+					}
+					break;
+				case 2:
+					score++;
+					//3个
+					Integer[] answer23322 = {2,2,3};
+					for(int j = 0;j<3;j++){
+						if(answer23322[j].equals(Integer.parseInt(answers233[5*i+20+j])))score++;
+					}
+					break;
+				case 1:
+					score++;
+					//3个
+					Integer[] answer23321 = {1,1,2};
+					for(int j = 0;j<3;j++){
+						if(answer23321[j].equals(Integer.parseInt(answers233[5*i+20+j])))score++;
+					}
+					break;
+				case 6:
+					score++;
+					//3个
+					Integer[] answer23326 = {6,6,1};
+					for(int j = 0;j<3;j++){
+						if(answer23326[j].equals(Integer.parseInt(answers233[5*i+20+j])))score++;
+					}
+					break;
+				case 7:
+					score++;
+					//3个
+					Integer[] answer23327 = {7,7,6};
+					for(int j = 0;j<3;j++){
+						if(answer23327[j].equals(Integer.parseInt(answers233[5*i+20+j])))score++;
+					}
+					break;
+				case 8:
+					score++;
+					//3个
+					Integer[] answer23328 = {8,8,7};
+					for(int j = 0;j<3;j++){
+						if(answer23328[j].equals(Integer.parseInt(answers233[5*i+20+j])))score++;
+					}
+					break;
+			}
+		}
+		for(int i = 0;i<19;i++){
+			if(answer2333[i].equals(Integer.parseInt(answers233[i+53])))score++;
+		}
+
+		int n=scoreDao.countByStudentId(entity.getStudentId());
+
+		if(n>=1){
+			ScoreEntity entitySql = scoreDao.selectByStudentId(entity.getStudentId());
+			if(entitySql.getScore233()!=null) times = Double.parseDouble(entitySql.getScore233().split("\\^")[1])+1;
+			else times = 1;}
+		else times = 1;
+		scoreS = String.valueOf(score) + "^" + String.valueOf(times);
+
+		entity.setIscomplete23(1);
+		entity.setScore233(scoreS);
+
+		int result;
+		if(n>=1) result = scoreDao.updateSelective2_3_3(entity);
+		else result = scoreDao.insertSelective2_3_3(entity);
+		if(result > 0){
+			flag = true;
+		}
+		return flag;
+	}
+
 }

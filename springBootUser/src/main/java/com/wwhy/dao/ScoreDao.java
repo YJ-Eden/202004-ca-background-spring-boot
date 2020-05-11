@@ -207,4 +207,46 @@ public interface ScoreDao{
 	 * create date:2019-09-05
 	 */
 	public int updateSelective2_2_3(ScoreEntity entity);
+
+	/**
+	 * 添加非空字段2-3-1
+	 * @author eden
+	 * create date:2019-09-05
+	 */
+	public int insertSelective2_3_1(ScoreEntity entity);
+
+	/**
+	 * 添加非空字段2-3-1
+	 * @author eden
+	 * create date:2019-09-05
+	 */
+	public int updateSelective2_3_1(ScoreEntity entity);
+
+	/**
+	 * 添加非空字段2-3-2
+	 * @author eden
+	 * create date:2019-09-05
+	 */
+	public int insertSelective2_3_2(ScoreEntity entity);
+
+	/**
+	 * 添加非空字段2-3-2
+	 * @author eden
+	 * create date:2019-09-05
+	 */
+	public int updateSelective2_3_2(ScoreEntity entity);
+
+	/**
+	 * 添加非空字段2-3-3
+	 * @author eden
+	 * create date:2019-09-05
+	 */
+	public int insertSelective2_3_3(ScoreEntity entity);
+
+	/**
+	 * 添加非空字段2-3-3
+	 * @author eden
+	 * create date:2019-09-05
+	 */
+	public int updateSelective2_3_3(ScoreEntity entity);
 }

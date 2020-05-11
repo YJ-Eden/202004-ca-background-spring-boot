@@ -138,6 +138,30 @@ public class ScoreVO implements Serializable{
 	@ApiModelProperty(value = "答案223",name="answer223")
 	private String answer223;
 
+	@ApiModelProperty(value = "更新时间23",name="updateTime23")
+	private Date updateTime23;
+
+	@ApiModelProperty(value = "是否完成23",name="iscomplete23")
+	private Integer iscomplete23;
+
+	@ApiModelProperty(value = "分数231",name="score231")
+	private String score231;
+
+	@ApiModelProperty(value = "答案231",name="answer231")
+	private String answer231;
+
+	@ApiModelProperty(value = "分数232",name="score232")
+	private String score232;
+
+	@ApiModelProperty(value = "答案232",name="answer232")
+	private String answer232;
+
+	@ApiModelProperty(value = "分数233",name="score233")
+	private String score233;
+
+	@ApiModelProperty(value = "答案233",name="answer233")
+	private String answer233;
+
 	public Long getId(){
 		return id;
 	}
@@ -365,4 +389,44 @@ public class ScoreVO implements Serializable{
 
 	public String getAnswer223(){return answer223;}
 	public void setAnswer223(String answer){answer223=answer;}
+
+	public Date getUpdateTime23(){
+		return updateTime23;
+	}
+	public void setUpdateTime23(Date updateTime){
+		updateTime23 = updateTime;
+	}
+
+	public Integer getIscomplete23(){return iscomplete23;}
+	public void setIscomplete23(Integer iscomplete){iscomplete23 = iscomplete;}
+
+	public String getScore231(){
+		return score231;
+	}
+	public void setScore231(String score){
+		this.score231 = score;
+	}
+
+	public String getAnswer231(){return answer231;}
+	public void setAnswer231(String answer){answer231=answer;}
+
+	public String getScore232(){
+		return score232;
+	}
+	public void setScore232(String score){
+		this.score232 = score;
+	}
+
+	public String getAnswer232(){return answer232;}
+	public void setAnswer232(String answer){answer232=answer;}
+
+	public String getScore233(){
+		return score233;
+	}
+	public void setScore233(String score){
+		this.score233 = score;
+	}
+
+	public String getAnswer233(){return answer233;}
+	public void setAnswer233(String answer){answer233=answer;}
 }
