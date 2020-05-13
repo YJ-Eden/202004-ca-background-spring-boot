@@ -9,13 +9,7 @@
     <list default="true" id="82c051df-8e5d-47c8-a60a-6136480c2d70" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/user_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/user_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/controller/ScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/controller/ScoreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/dao/ScoreDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/dao/ScoreDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/dao/mapper/ScoreMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/dao/mapper/ScoreMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/entity/ScoreEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/entity/ScoreEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/service/ScoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/service/ScoreService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/service/impl/ScoreServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/service/impl/ScoreServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/vo/ScoreVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/vo/ScoreVO.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -200,6 +194,7 @@
       <workItem from="1589166183665" duration="7998000" />
       <workItem from="1589179095488" duration="67000" />
       <workItem from="1589182479479" duration="351000" />
+      <workItem from="1589335102161" duration="653000" />
     </task>
     <servers />
   </component>

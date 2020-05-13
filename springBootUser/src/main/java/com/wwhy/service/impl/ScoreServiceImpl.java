@@ -873,10 +873,10 @@ public class ScoreServiceImpl implements ScoreService {
 		double score=0;
 		double times;
 		String scoreS;
-		//18个
-		Integer[] answer232 = {1,10,0,1,1,10,0,1,1,1,10,0,0,1,0,1,1,10};
+		//28个
+		Integer[] answer232 = {4,5,0,1,1,2,2,3,3,4,4,5,0,4,4,5,0,4,0,1,1,2,2,3,3,4,4,5};
 		String[] answers232 = entity.getAnswer232().split("\\^");
-		for(int i = 0;i<18;i++){
+		for(int i = 0;i<28;i++){
 			if(answer232[i].equals(Integer.parseInt(answers232[i])))score++;
 		}
 
@@ -914,75 +914,75 @@ public class ScoreServiceImpl implements ScoreService {
 		String scoreS;
 		//18个
 		Integer[] answer2331 = {4,5,0,8,8,7,7,6,6,1,1,2,2,3,3,4,4,5};
-		//19个
-		Integer[] answer2333 = {0,0,8,0,8,8,7,7,6,6,1,1,2,2,3,3,4,4,5};
+		//18个
+		Integer[] answer2333 = {0,8,0,8,8,7,7,6,6,1,1,2,2,3,3,4,4,5};
 		String[] answers233 = entity.getAnswer233().split("\\^");
 		for(int i = 0;i<18;i++){
 			if(answer2331[i].equals(Integer.parseInt(answers233[i])))score++;
 		}
 		for(int i=0;i<7;i++){
-			if(Integer.parseInt(answers233[5*i+18])==0)score++;
-			switch (Integer.parseInt(answers233[5*i+19])){
+			if(Integer.parseInt(answers233[4*i+18])==0)score++;
+			switch (Integer.parseInt(answers233[4*i+19])){
 				case 4:
 					score++;
-					//3个
-					Integer[] answer23324 = {4,4,5};
-					for(int j = 0;j<3;j++){
-						if(answer23324[j].equals(Integer.parseInt(answers233[5*i+20+j])))score++;
+					//2个
+					Integer[] answer23324 = {4,5};
+					for(int j = 0;j<2;j++){
+						if(answer23324[j].equals(Integer.parseInt(answers233[4*i+20+j])))score++;
 					}
 					break;
 				case 3:
 					score++;
-					//3个
-					Integer[] answer23323 = {3,3,4};
-					for(int j = 0;j<3;j++){
-						if(answer23323[j].equals(Integer.parseInt(answers233[5*i+20+j])))score++;
+					//2个
+					Integer[] answer23323 = {3,4};
+					for(int j = 0;j<2;j++){
+						if(answer23323[j].equals(Integer.parseInt(answers233[4*i+20+j])))score++;
 					}
 					break;
 				case 2:
 					score++;
-					//3个
-					Integer[] answer23322 = {2,2,3};
-					for(int j = 0;j<3;j++){
-						if(answer23322[j].equals(Integer.parseInt(answers233[5*i+20+j])))score++;
+					//2个
+					Integer[] answer23322 = {2,3};
+					for(int j = 0;j<2;j++){
+						if(answer23322[j].equals(Integer.parseInt(answers233[4*i+20+j])))score++;
 					}
 					break;
 				case 1:
 					score++;
-					//3个
-					Integer[] answer23321 = {1,1,2};
-					for(int j = 0;j<3;j++){
-						if(answer23321[j].equals(Integer.parseInt(answers233[5*i+20+j])))score++;
+					//2个
+					Integer[] answer23321 = {1,2};
+					for(int j = 0;j<2;j++){
+						if(answer23321[j].equals(Integer.parseInt(answers233[4*i+20+j])))score++;
 					}
 					break;
 				case 6:
 					score++;
-					//3个
-					Integer[] answer23326 = {6,6,1};
-					for(int j = 0;j<3;j++){
-						if(answer23326[j].equals(Integer.parseInt(answers233[5*i+20+j])))score++;
+					//2个
+					Integer[] answer23326 = {6,1};
+					for(int j = 0;j<2;j++){
+						if(answer23326[j].equals(Integer.parseInt(answers233[4*i+20+j])))score++;
 					}
 					break;
 				case 7:
 					score++;
-					//3个
-					Integer[] answer23327 = {7,7,6};
-					for(int j = 0;j<3;j++){
-						if(answer23327[j].equals(Integer.parseInt(answers233[5*i+20+j])))score++;
+					//2个
+					Integer[] answer23327 = {7,6};
+					for(int j = 0;j<2;j++){
+						if(answer23327[j].equals(Integer.parseInt(answers233[4*i+20+j])))score++;
 					}
 					break;
 				case 8:
 					score++;
-					//3个
-					Integer[] answer23328 = {8,8,7};
-					for(int j = 0;j<3;j++){
-						if(answer23328[j].equals(Integer.parseInt(answers233[5*i+20+j])))score++;
+					//2个
+					Integer[] answer23328 = {8,7};
+					for(int j = 0;j<2;j++){
+						if(answer23328[j].equals(Integer.parseInt(answers233[4*i+20+j])))score++;
 					}
 					break;
 			}
 		}
-		for(int i = 0;i<19;i++){
-			if(answer2333[i].equals(Integer.parseInt(answers233[i+53])))score++;
+		for(int i = 0;i<18;i++){
+			if(answer2333[i].equals(Integer.parseInt(answers233[i+46])))score++;
 		}
 
 		int n=scoreDao.countByStudentId(entity.getStudentId());
