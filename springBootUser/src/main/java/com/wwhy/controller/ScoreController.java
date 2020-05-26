@@ -455,6 +455,22 @@ public class ScoreController{
 	}
 
 	/**
+	 * 查询所有数据
+	 * @author wangpan
+	 * create date 2019-09-05
+	 */
+	@ApiOperation(value="教师查询所有数据", response=CommResult.class)
+	@ApiResponses({
+			@ApiResponse(code=200,message="成功,返回content中vo类参数如下", response=ScoreVO.class)
+	})
+	@PostMapping(value = "getAllByTeacher", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public CommResult getAllScoreByTeacher(HttpServletRequest request,ScoreEntity entity){
+		TeacherVO teacher = (TeacherVO)redisService.get(request.getHeader("token"));
+		List<ScoreVO> list = scoreService.getAllScoreListByCondition(entity);
+		return CommResult.ok(list);
+	}
+
+	/**
 	 * bvh文件上传
 	 * @author eden
 	 * create date:2019-09-05

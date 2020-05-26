@@ -5,6 +5,7 @@ import com.wwhy.common.util.MD5Util;
 import com.wwhy.config.CustomConfiguration;
 import com.wwhy.entity.StudentEntity;
 import com.wwhy.service.RedisService;
+import com.wwhy.vo.TeacherVO;
 import io.swagger.annotations.*;
 
 import java.util.Date;
@@ -244,6 +245,22 @@ public class StudentController{
 			return CommResult.ok();
 		}
 		return CommResult.error("修改失败。");
+	}
+
+	/**
+	 * 查询所有数据
+	 * @author wangpan
+	 * create date 2019-09-05
+	 */
+	@ApiOperation(value="教师查询所有数据", response=CommResult.class)
+	@ApiResponses({
+			@ApiResponse(code=200,message="成功,返回content中vo类参数如下", response=StudentVO.class)
+	})
+	@PostMapping(value = "getAllByTeacher", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public CommResult getAllStudentByTeacher(HttpServletRequest request,StudentEntity entity){
+		TeacherVO teacher = (TeacherVO)redisService.get(request.getHeader("token"));
+		List<StudentVO> list = studentService.getAllStudentListByCondition(entity);
+		return CommResult.ok(list);
 	}
 
 }

@@ -20,6 +20,9 @@ public class StudentEntity extends BasicEntity {
 	@ApiModelProperty(value = "姓名",name="name")
 	private String name;
 
+	@ApiModelProperty(value = "姓名2",name="name2")
+	private String name2;
+
 	@ApiModelProperty(value = "密码MD5加密",name="password")
 	private String password;
 
@@ -77,6 +80,14 @@ public class StudentEntity extends BasicEntity {
 
 	public void setName(String name){
 		this.name = name;
+	}
+
+	public String getName2(){
+		return name2;
+	}
+
+	public void setName2(String name){
+		this.name2 = name;
 	}
 
 	public String getCode(){

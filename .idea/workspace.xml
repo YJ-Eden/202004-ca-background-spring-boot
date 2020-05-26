@@ -7,9 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82c051df-8e5d-47c8-a60a-6136480c2d70" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/user_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/user_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/user_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/service/impl/ScoreServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/service/impl/ScoreServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/controller/ScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/controller/ScoreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/dao/mapper/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/dao/mapper/StudentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/entity/StudentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/entity/StudentEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/vo/StudentVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/java/com/wwhy/vo/StudentVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springBootUser/src/main/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/springBootUser/src/main/resources/application-test.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,11 +55,11 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="Docker" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -195,6 +200,14 @@
       <workItem from="1589179095488" duration="67000" />
       <workItem from="1589182479479" duration="351000" />
       <workItem from="1589335102161" duration="653000" />
+      <workItem from="1589420836991" duration="91000" />
+      <workItem from="1589421681886" duration="68000" />
+      <workItem from="1589969841388" duration="111000" />
+      <workItem from="1590400202560" duration="2513000" />
+      <workItem from="1590456876058" duration="500000" />
+      <workItem from="1590458204092" duration="402000" />
+      <workItem from="1590459003650" duration="46000" />
+      <workItem from="1590460431235" duration="1505000" />
     </task>
     <servers />
   </component>
