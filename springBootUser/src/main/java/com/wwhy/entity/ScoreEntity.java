@@ -152,6 +152,18 @@ public class ScoreEntity extends BasicEntity {
 	@ApiModelProperty(value = "答案233",name="answer233")
 	private String answer233;
 
+	@ApiModelProperty(value = "更新时间24",name="updateTime24")
+	private Date updateTime24;
+
+	@ApiModelProperty(value = "是否完成24",name="iscomplete24")
+	private Integer iscomplete24;
+
+	@ApiModelProperty(value = "分数241",name="score241")
+	private String score241;
+
+	@ApiModelProperty(value = "答案241",name="answer241")
+	private String answer241;
+
 
 	public Long getId(){
 		return id;
@@ -379,5 +391,25 @@ public class ScoreEntity extends BasicEntity {
 
 	public String getAnswer233(){return answer233;}
 	public void setAnswer233(String answer){answer233=answer;}
+
+	public Date getUpdateTime24(){
+		return updateTime24;
+	}
+	public void setUpdateTime24(Date updateTime){
+		updateTime24 = updateTime;
+	}
+
+	public Integer getIscomplete24(){return iscomplete24;}
+	public void setIscomplete24(Integer iscomplete){iscomplete24 = iscomplete;}
+
+	public String getScore241(){
+		return score241;
+	}
+	public void setScore241(String score){
+		this.score241 = score;
+	}
+
+	public String getAnswer241(){return answer241;}
+	public void setAnswer241(String answer){answer241=answer;}
 
 }

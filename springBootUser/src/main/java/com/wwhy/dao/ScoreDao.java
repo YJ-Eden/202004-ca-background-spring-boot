@@ -249,4 +249,18 @@ public interface ScoreDao{
 	 * create date:2019-09-05
 	 */
 	public int updateSelective2_3_3(ScoreEntity entity);
+
+	/**
+	 * 添加非空字段2-4-1
+	 * @author eden
+	 * create date:2019-09-05
+	 */
+	public int insertSelective2_4_1(ScoreEntity entity);
+
+	/**
+	 * 添加非空字段2-4-1
+	 * @author eden
+	 * create date:2019-09-05
+	 */
+	public int updateSelective2_4_1(ScoreEntity entity);
 }

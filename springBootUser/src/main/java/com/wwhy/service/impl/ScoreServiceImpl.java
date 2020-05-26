@@ -1006,4 +1006,43 @@ public class ScoreServiceImpl implements ScoreService {
 		return flag;
 	}
 
+	/**
+	 * 添加2-4-1
+	 * @author eden
+	 * create date:2020-03-26
+	 */
+	@Override
+	public boolean insertScore2_4_1(ScoreEntity entity){
+		boolean flag=false;
+		double score=0;
+		double times;
+		String scoreS;
+		//18个
+		Double[] answer241 = {2.0,6.0,3.0,5.0,11.0,7.0,8.0,10.0,1.0,2.0,4.0,9.0,2.0,1.0,2.0,1.0,2.0,1.0};
+		String[] answers241 = entity.getAnswer241().split("\\^");
+		for(int i = 0;i<18;i++){
+			if(answer241[i].equals(Double.parseDouble(answers241[i])))score++;
+		}
+
+		int n=scoreDao.countByStudentId(entity.getStudentId());
+
+		if(n>=1){
+			ScoreEntity entitySql = scoreDao.selectByStudentId(entity.getStudentId());
+			if(entitySql.getScore241()!=null) times = Double.parseDouble(entitySql.getScore241().split("\\^")[1])+1;
+			else times = 1;}
+		else times = 1;
+		scoreS = String.valueOf(score) + "^" + String.valueOf(times);
+
+		entity.setScore241(scoreS);
+		entity.setIscomplete24(1);
+
+		int result;
+		if(n>=1) result = scoreDao.updateSelective2_4_1(entity);
+		else result = scoreDao.insertSelective2_4_1(entity);
+		if(result > 0){
+			flag = true;
+		}
+		return flag;
+	}
+
 }

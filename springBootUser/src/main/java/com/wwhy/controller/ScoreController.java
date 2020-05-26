@@ -438,6 +438,28 @@ public class ScoreController{
 	}
 
 	/**
+	 * 提交实验报告2-4-1
+	 * @author eden
+	 * create date:2020-03-26
+	 */
+	@ApiOperation(value="提交实验报告2-4-1",response=CommResult.class)
+	@PostMapping(value="submit2-4-1",produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	public CommResult submit2_4_1(HttpServletRequest request, ScoreEntity entity){
+		StudentVO student = (StudentVO)redisService.get(request.getHeader("token"));
+		entity.setUpdateTime24(new Date());
+		entity.setUpdateTime(new Date());
+		entity.setStudentId(student.getId());
+		//return CommResult.ok(entity);
+		boolean flag=scoreService.insertScore2_4_1(entity);
+
+		if(flag){
+			return CommResult.ok();
+		}
+		return CommResult.error("添加失败。");
+
+	}
+
+	/**
 	 * 根据student id查询数据
 	 * @author eden
 	 * create date:2019-09-05
